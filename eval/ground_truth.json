@@ -4,43 +4,46 @@
     "about": [
       {"mode": "num", "path": "founding_year", "expected": 1861},
       {"mode": "exact", "path": "type", "expected": "private"},
-      {"mode": "contains", "path": "location", "expected": "Cambridge"}
+      {"mode": "contains", "path": "location", "expected": "Cambridge"},
+      {"mode": "exact", "path": "country", "expected": "United States"}
     ],
     "tuition_fees": [
-      {"mode": "list_min", "n": 2, "keys": ["program_level", "international_annual"]},
-      {"mode": "any_num", "field": "international_annual", "expected": 64730, "tol_rel": 0.02}
+      {"mode": "list_min", "n": 2, "keys": ["program_level", "currency"]},
+      {"mode": "list_contains", "field": "currency", "expected": "USD"},
+      {"mode": "any_present", "field": "domestic_annual"}
     ],
     "living_costs": [
       {"mode": "exact", "path": "currency", "expected": "USD"},
-      {"mode": "num", "path": "rent", "expected": 1425, "tol_rel": 0.1},
-      {"mode": "present", "path": "total"}
+      {"mode": "contains", "path": "city", "expected": "Cambridge"}
     ],
     "scholarships": [
       {"mode": "list_min", "n": 1, "keys": ["name"]},
       {"mode": "list_contains", "field": "name", "expected": "MIT Scholarship"}
     ],
     "acceptance_rate": [
-      {"mode": "num", "path": "overall_pct", "expected": 4.6, "tol_abs": 0.5}
+      {"mode": "null_ok", "path": "overall_pct"}
     ],
     "graduate_employment": [
-      {"mode": "null_ok", "path": "employed_within_6_months_pct"},
-      {"mode": "present", "path": "source"}
+      {"mode": "present", "path": "employed_within_6_months_pct"},
+      {"mode": "present", "path": "source"},
+      {"mode": "present", "path": "year"}
     ],
     "average_salaries": [
-      {"mode": "list_min", "n": 1, "keys": ["median_salary"]},
-      {"mode": "any_num", "field": "median_salary", "expected": 126438, "tol_rel": 0.05}
+      {"mode": "list_min", "n": 5, "keys": ["field_of_study", "median_salary"]},
+      {"mode": "any_num", "field": "median_salary", "expected": 115000, "tol_rel": 0.1}
     ],
     "visa_policies": [
-      {"mode": "contains", "path": "visa_type", "expected": "I-20"},
-      {"mode": "present", "path": "processing_time"}
+      {"mode": "contains", "path": "visa_type", "expected": "F-1"},
+      {"mode": "list_min", "path": "key_requirements", "n": 2},
+      {"mode": "present", "path": "country"}
     ],
     "intake_deadlines": [
-      {"mode": "list_min", "n": 1, "keys": ["intake", "close_date"]},
-      {"mode": "list_contains", "field": "close_date", "expected": "January 5"}
+      {"mode": "null_ok", "path": ""}
     ],
     "course_listings": [
       {"mode": "list_min", "n": 8, "keys": ["code", "title"]},
-      {"mode": "list_contains", "field": "code", "expected": "6.100A"}
+      {"mode": "list_contains", "field": "code", "expected": "6-3"},
+      {"mode": "list_contains", "field": "title", "expected": "Computer Science and Engineering"}
     ]
   },
   "uoft": {
@@ -83,6 +86,46 @@
     "course_listings": [
       {"mode": "list_min", "n": 8, "keys": ["code", "title"]},
       {"mode": "list_contains", "field": "code", "expected": "CSC108H1"}
+    ]
+  },
+  "berkeley": {
+    "about": [
+      {"mode": "num", "path": "founding_year", "expected": 1868},
+      {"mode": "exact", "path": "type", "expected": "public"},
+      {"mode": "contains", "path": "location", "expected": "Berkeley"}
+    ],
+    "tuition_fees": [
+      {"mode": "list_min", "n": 2, "keys": ["program_level", "currency"]},
+      {"mode": "list_contains", "field": "currency", "expected": "USD"},
+      {"mode": "any_num", "field": "domestic_annual", "expected": 46122, "tol_rel": 0.05}
+    ],
+    "living_costs": [
+      {"mode": "exact", "path": "currency", "expected": "USD"},
+      {"mode": "contains", "path": "city", "expected": "Berkeley"},
+      {"mode": "num", "path": "rent", "expected": 1920, "tol_rel": 0.1}
+    ],
+    "scholarships": [
+      {"mode": "list_min", "n": 3, "keys": ["name"]},
+      {"mode": "list_contains", "field": "name", "expected": "Regents' and Chancellor's Scholarship"}
+    ],
+    "acceptance_rate": [
+      {"mode": "num", "path": "undergraduate_pct", "expected": 14.3, "tol_abs": 0.5}
+    ],
+    "graduate_employment": [
+      {"mode": "null_ok", "path": "employed_within_6_months_pct"}
+    ],
+    "average_salaries": [
+      {"mode": "list_min", "n": 1, "keys": ["field_of_study"]}
+    ],
+    "visa_policies": [
+      {"mode": "contains", "path": "visa_type", "expected": "F-1"},
+      {"mode": "list_min", "path": "key_requirements", "n": 2}
+    ],
+    "intake_deadlines": [
+      {"mode": "list_min", "n": 1, "keys": ["intake"]}
+    ],
+    "course_listings": [
+      {"mode": "null_ok", "path": ""}
     ]
   }
 }

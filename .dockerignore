@@ -1,0 +1,12 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.pytest_cache/
+.git/
+.claude/
+.env
+.DS_Store
+*.pdf
+data/universities.db

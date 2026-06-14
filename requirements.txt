@@ -1,0 +1,16 @@
+# Core runtime dependencies (everything the agent needs to scrape + extract).
+requests>=2.31         # polite HTTP with sessions, retries handled by us
+beautifulsoup4>=4.12   # HTML -> clean text / link + table extraction
+PyYAML>=6.0            # university plug-in configs (universities/*.yaml)
+protego>=0.3           # spec-compliant robots.txt parser (handles Allow: correctly)
+
+# --- Optional extras (the agent runs without these; it degrades gracefully) ---
+# JS-rendered pages. Install with:  pip install playwright && playwright install chromium
+# playwright>=1.40
+#
+# Query API (bonus). Install with:  pip install fastapi uvicorn
+# fastapi>=0.110
+# uvicorn>=0.29
+#
+# Test suite. Install with:  pip install pytest
+# pytest>=8.0

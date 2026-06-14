@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Binary SQLite DB is regenerable via `python cli.py run`.
+data/universities.db
+
+# NOTE: data/output.json + data/*.csv are the required "Sample Output" deliverable
+# and ARE committed. The page cache (data/cache/) is also committed so re-runs are
+# fast and the eval reproduces.
+
+# Secrets
+.env
+
+# Local agent / editor config
+.claude/
+
+# OS / editor cruft
+.DS_Store
+*.swp
+.idea/
+.vscode/

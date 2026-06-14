@@ -1,0 +1,61 @@
+# Plug-in config for Massachusetts Institute of Technology.
+# Adding a university = dropping a file like this in. No code changes needed.
+#
+# Each field lists one or more seed URLs. Where the brief asks us to
+# cross-validate (fees, deadlines), two independent sources are given so the
+# pipeline can corroborate and raise confidence.
+slug: mit
+name: Massachusetts Institute of Technology
+country: USA
+city: Cambridge, Massachusetts
+currency: USD
+homepage: https://web.mit.edu/
+
+seeds:
+  about:
+    # MIT's own facts page + Wikipedia (stable, structured) corroborate each
+    # other on founding year / type / ranking / location.
+    - https://web.mit.edu/facts/
+    - https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology
+
+  tuition_fees:
+    # Two independent sources each for UG and grad: Student Financial Services
+    # and the official Course Catalog -> lets the pipeline cross-validate fees.
+    urls:
+      - https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/
+      - https://catalog.mit.edu/mit/undergraduate-education/costs/
+      - https://sfs.mit.edu/graduate-students/cost-of-attendance/grad-cost-of-attendance/
+      - https://catalog.mit.edu/mit/graduate-education/costs/
+
+  living_costs:
+    # The cost-of-attendance breakdown carries housing/food/personal estimates.
+    - https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/
+
+  scholarships:
+    - https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/making-mit-affordable/
+    - https://sfs.mit.edu/undergraduate-students/types-of-aid/outside-scholarships-and-financial-aid/
+
+  acceptance_rate:
+    - https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology
+
+  graduate_employment:
+    - https://mitadmissions.org/help/faq/career-development/
+    - https://capd.mit.edu/resources/doctoral-outcomes-and-salaries/
+
+  average_salaries:
+    - https://capd.mit.edu/resources/doctoral-outcomes-and-salaries/
+    - https://mitadmissions.org/help/faq/career-development/
+
+  visa_policies:
+    - https://iso.mit.edu/getting-started/requesting-an-i-20-or-ds-2019/
+    - https://iso.mit.edu/
+
+  intake_deadlines:
+    - https://mitadmissions.org/apply/firstyear/deadlines-requirements/
+
+  course_listings:
+    # Department subject catalogues: code, title, units, description, prereqs.
+    urls:
+      - https://catalog.mit.edu/subjects/6/   # EECS
+      - https://catalog.mit.edu/subjects/18/  # Mathematics
+    max_pages: 4

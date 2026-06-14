@@ -1,0 +1,48 @@
+slug: berkeley
+name: University of California, Berkeley
+country: USA
+city: Berkeley, California
+currency: USD
+homepage: https://www.berkeley.edu/
+
+seeds:
+  about:
+    - https://www.berkeley.edu/about/
+    - https://en.wikipedia.org/wiki/University_of_California,_Berkeley
+
+  tuition_fees:
+    urls:
+      - https://financialaid.berkeley.edu/cost-of-attendance/
+      - https://registrar.berkeley.edu/tuition-fees-residency/tuition-fees/
+
+  living_costs:
+    - https://financialaid.berkeley.edu/cost-of-attendance/
+
+  scholarships:
+    - https://financialaid.berkeley.edu/types-of-aid/scholarships/
+    - https://financialaid.berkeley.edu/
+
+  acceptance_rate:
+    - https://en.wikipedia.org/wiki/University_of_California,_Berkeley
+
+  graduate_employment:
+    - https://en.wikipedia.org/wiki/University_of_California,_Berkeley
+    - https://career.berkeley.edu/
+
+  average_salaries:
+    - https://en.wikipedia.org/wiki/University_of_California,_Berkeley
+    - https://career.berkeley.edu/
+
+  visa_policies:
+    - https://internationaloffice.berkeley.edu/
+    - https://internationaloffice.berkeley.edu/students/new-students
+
+  intake_deadlines:
+    - https://admissions.berkeley.edu/
+    - https://en.wikipedia.org/wiki/University_of_California,_Berkeley
+
+  course_listings:
+    urls:
+      - https://guide.berkeley.edu/courses/compsci/
+      - https://guide.berkeley.edu/courses/math/
+    max_pages: 4

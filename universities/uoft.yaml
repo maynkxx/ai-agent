@@ -1,0 +1,54 @@
+# Plug-in config for the University of Toronto.
+# A second country (Canada) deliberately chosen so the agent exercises its
+# currency cross-check (CAD vs USD) and a different visa regime (study permit).
+slug: uoft
+name: University of Toronto
+country: Canada
+city: Toronto, Ontario
+currency: CAD
+homepage: https://www.utoronto.ca/
+
+seeds:
+  about:
+    # NB: www.utoronto.ca returns HTTP 403 to non-browser agents, so we rely on
+    # Wikipedia (which its robots.txt permits). A clean example of the agent
+    # routing around a blocked source instead of failing the field.
+    - https://en.wikipedia.org/wiki/University_of_Toronto
+
+  tuition_fees:
+    # Future-students fees overview + the registrar's tuition tables.
+    urls:
+      - https://future.utoronto.ca/finances/fees/
+      - https://studentaccount.utoronto.ca/tuition-fees/
+
+  living_costs:
+    - https://future.utoronto.ca/other-costs-university
+    - https://future.utoronto.ca/housing
+
+  scholarships:
+    - https://future.utoronto.ca/finances/scholarships/
+
+  acceptance_rate:
+    - https://en.wikipedia.org/wiki/University_of_Toronto
+
+  # UofT does not publish a clean "% employed / median salary" page (the
+  # quick-facts page is 403 to bots), so these point at Wikipedia and will often
+  # come back partial/empty - reported honestly rather than hallucinated.
+  graduate_employment:
+    - https://en.wikipedia.org/wiki/University_of_Toronto
+
+  average_salaries:
+    - https://en.wikipedia.org/wiki/University_of_Toronto
+
+  visa_policies:
+    - https://future.utoronto.ca/study-permits
+
+  intake_deadlines:
+    - https://future.utoronto.ca/deadlines
+    - https://www.utsc.utoronto.ca/admissions/dates-deadlines
+
+  course_listings:
+    urls:
+      - https://artsci.calendar.utoronto.ca/section/Computer-Science
+      - https://artsci.calendar.utoronto.ca/section/Mathematics
+    max_pages: 4

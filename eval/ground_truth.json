@@ -1,0 +1,88 @@
+{
+  "_about": "Hand-verified ground truth for the eval harness. Each field lists independent CHECKS run against the agent's output by eval/evaluate.py. Values were verified against the official source pages (the same pages the agent scrapes). Where a source genuinely does not publish a value, the check mode is 'null_ok'/'empty_ok' so the agent is rewarded for an honest null and NOT penalised for a gap it could not fill.",
+  "mit": {
+    "about": [
+      {"mode": "num", "path": "founding_year", "expected": 1861},
+      {"mode": "exact", "path": "type", "expected": "private"},
+      {"mode": "contains", "path": "location", "expected": "Cambridge"}
+    ],
+    "tuition_fees": [
+      {"mode": "list_min", "n": 2, "keys": ["program_level", "international_annual"]},
+      {"mode": "any_num", "field": "international_annual", "expected": 64730, "tol_rel": 0.02}
+    ],
+    "living_costs": [
+      {"mode": "exact", "path": "currency", "expected": "USD"},
+      {"mode": "num", "path": "rent", "expected": 1425, "tol_rel": 0.1},
+      {"mode": "present", "path": "total"}
+    ],
+    "scholarships": [
+      {"mode": "list_min", "n": 1, "keys": ["name"]},
+      {"mode": "list_contains", "field": "name", "expected": "MIT Scholarship"}
+    ],
+    "acceptance_rate": [
+      {"mode": "num", "path": "overall_pct", "expected": 4.6, "tol_abs": 0.5}
+    ],
+    "graduate_employment": [
+      {"mode": "null_ok", "path": "employed_within_6_months_pct"},
+      {"mode": "present", "path": "source"}
+    ],
+    "average_salaries": [
+      {"mode": "list_min", "n": 1, "keys": ["median_salary"]},
+      {"mode": "any_num", "field": "median_salary", "expected": 126438, "tol_rel": 0.05}
+    ],
+    "visa_policies": [
+      {"mode": "contains", "path": "visa_type", "expected": "I-20"},
+      {"mode": "present", "path": "processing_time"}
+    ],
+    "intake_deadlines": [
+      {"mode": "list_min", "n": 1, "keys": ["intake", "close_date"]},
+      {"mode": "list_contains", "field": "close_date", "expected": "January 5"}
+    ],
+    "course_listings": [
+      {"mode": "list_min", "n": 8, "keys": ["code", "title"]},
+      {"mode": "list_contains", "field": "code", "expected": "6.100A"}
+    ]
+  },
+  "uoft": {
+    "about": [
+      {"mode": "num", "path": "founding_year", "expected": 1827},
+      {"mode": "exact", "path": "type", "expected": "public"},
+      {"mode": "contains", "path": "location", "expected": "Toronto"},
+      {"mode": "present", "path": "ranking"}
+    ],
+    "tuition_fees": [
+      {"mode": "list_min", "n": 1, "keys": ["program_level", "currency"]},
+      {"mode": "list_contains", "field": "currency", "expected": "CAD"},
+      {"mode": "any_present", "field": "international_annual"}
+    ],
+    "living_costs": [
+      {"mode": "exact", "path": "currency", "expected": "CAD"},
+      {"mode": "contains", "path": "city", "expected": "Toronto"}
+    ],
+    "scholarships": [
+      {"mode": "list_min", "n": 3, "keys": ["name"]},
+      {"mode": "list_contains", "field": "name", "expected": "Lester B. Pearson"}
+    ],
+    "acceptance_rate": [
+      {"mode": "null_ok", "path": "overall_pct"}
+    ],
+    "graduate_employment": [
+      {"mode": "null_ok", "path": "employed_within_6_months_pct"}
+    ],
+    "average_salaries": [
+      {"mode": "empty_ok", "path": ""}
+    ],
+    "visa_policies": [
+      {"mode": "contains", "path": "visa_type", "expected": "Study Permit"},
+      {"mode": "list_min", "path": "key_requirements", "n": 2}
+    ],
+    "intake_deadlines": [
+      {"mode": "list_min", "n": 1, "keys": ["intake", "close_date"]},
+      {"mode": "list_contains", "field": "close_date", "expected": "January 15"}
+    ],
+    "course_listings": [
+      {"mode": "list_min", "n": 8, "keys": ["code", "title"]},
+      {"mode": "list_contains", "field": "code", "expected": "CSC108H1"}
+    ]
+  }
+}

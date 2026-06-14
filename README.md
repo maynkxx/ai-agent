@@ -5,10 +5,10 @@ university intelligence — about, tuition, living costs, scholarships, acceptan
 rates, graduate employment, salaries, visa policies, intake deadlines and course
 listings — across multiple institutions, optimised for **accuracy over breadth**.
 
-Two universities (**MIT**, **University of Toronto**) are scraped end-to-end;
+Three universities (**MIT**, **University of Toronto**, **UC Berkeley**) are scraped end-to-end;
 adding more is a zero-code YAML drop-in.
 
-> Current eval score: **98.3% overall** (MIT 100%, UofT 96.7%) — see
+> Current eval score: **85.0% overall** (MIT 100%, Berkeley 85%, UofT 70%) — see
 > [`eval/REPORT.md`](eval/REPORT.md).
 
 ---
@@ -23,22 +23,22 @@ pip install -r requirements.txt
 export GROQ_API_KEY=...            # get one at https://console.groq.com/keys
 
 # 3. Run the agent
-python cli.py run
+python3 cli.py run
 
 # 4. Read the results
-python cli.py show mit
+python3 cli.py show mit
 cat data/output.json
 ```
 
 With **no key**, the agent still runs and produces partial data via a
-deterministic regex fallback (graceful degradation): `python cli.py run --no-llm`.
+deterministic regex fallback (graceful degradation): `python3 cli.py run --no-llm`.
 
 A ready-made `data/output.json` + CSV sample ships in the repo, so the evaluator
 runs out of the box:
 
 ```bash
-python eval/evaluate.py            # score output against ground truth
-pytest -q                          # 31 unit tests (needs: pip install pytest)
+python3 eval/evaluate.py           # score output against ground truth
+python3 -m pytest -q               # 30 unit tests, no network required
 ```
 
 ### One-command Docker (bonus)
@@ -53,8 +53,8 @@ back to the host. With no key the container still runs (regex fallback). Query o
 evaluate by overriding the command:
 
 ```bash
-docker run --rm -v "$PWD/data:/app/data" uniagent python cli.py list
-docker run --rm -v "$PWD/data:/app/data" uniagent python eval/evaluate.py
+docker run --rm -v "$PWD/data:/app/data" uniagent python3 cli.py list
+docker run --rm -v "$PWD/data:/app/data" uniagent python3 eval/evaluate.py
 ```
 
 ### Why Groq (and not Ollama)
@@ -64,7 +64,7 @@ free tier runs a small model (`llama-3.1-8b-instant`) in the cloud, so the
 compute stays off your machine. If Groq is unreachable or no key is set, the
 extractor falls back to regex heuristics instead of crashing.
 
-Override the model: `python cli.py run --model llama-3.1-8b-instant`.
+Override the model: `python3 cli.py run --model llama-3.1-8b-instant`.
 
 ---
 
@@ -89,8 +89,8 @@ The four design pillars from the brief, and where they live:
   link discovery (`Planner.discover`) that mines a page's links when a seed is
   missing or dead. `pipeline.py` triggers discovery for any field without a seed.
 - **Self-validation** — `validator.py`: plausibility envelopes (a founding year
-  isn't 3025; a % is 0–100), currency-vs-country cross-checks (USD for MIT, CAD
-  for UofT), cross-source corroboration → a single confidence score + flags. It
+  isn't 3025; a % is 0–100), currency-vs-country cross-checks (USD for MIT/Berkeley,
+  CAD for UofT), cross-source corroboration → a single confidence score + flags. It
   **never deletes** data; it flags low-confidence values for review.
 - **Resilience** — `scraper.py`: retry with exponential back-off, `robots.txt`
   (via Protego), per-host rate limiting, on-disk caching, optional Playwright JS
@@ -115,7 +115,7 @@ uniagent/
   llm.py          Groq chat client (OpenAI-compatible)
 cli.py            run + query commands
 api.py            FastAPI query layer (bonus)
-universities/     plug-in configs (mit.yaml, uoft.yaml) — drop a file to add one
+universities/     plug-in configs (mit.yaml, uoft.yaml, berkeley.yaml) — drop a file to add one
 eval/             ground_truth.json + evaluate.py + REPORT.md
 tests/            unit tests (validator, planner, scraper, storage, llm)
 data/             cache/ (kept), output.json, *.csv, universities.db (generated)
@@ -123,17 +123,31 @@ data/             cache/ (kept), output.json, *.csv, universities.db (generated)
 
 ---
 
+## Universities
+
+| University | Country | Coverage | Eval Score |
+|---|---|---|---|
+| MIT | USA | 80% | 100% |
+| UC Berkeley | USA | 90% | 85% |
+| University of Toronto | Canada | 60% | 70% |
+
+UofT's lower coverage is due to bot-blocking (403 errors) and fee data hidden behind
+a JavaScript widget — reported honestly rather than hallucinated.
+
+---
+
 ## CLI
 
 ```bash
-python cli.py run                              # scrape all configured universities
-python cli.py run --universities mit           # just one
-python cli.py run --incremental                # skip unchanged pages
-python cli.py run --no-llm                     # heuristics only (no key, offline)
-python cli.py list                             # list scraped universities + coverage
-python cli.py show mit                         # full record as JSON
-python cli.py field mit tuition_fees           # one field
-python cli.py courses --slug mit --q algorithms
+python3 cli.py run                              # scrape all configured universities
+python3 cli.py run --universities mit           # just one
+python3 cli.py run --universities mit berkeley  # two specific ones
+python3 cli.py run --incremental                # skip unchanged pages
+python3 cli.py run --no-llm                     # heuristics only (no key, offline)
+python3 cli.py list                             # list scraped universities + coverage
+python3 cli.py show mit                         # full record as JSON
+python3 cli.py field mit tuition_fees           # one field
+python3 cli.py courses --slug mit --q algorithms
 ```
 
 ## Query API (bonus)
@@ -163,13 +177,10 @@ fields a source **does not publish** use `null_ok` checks, so the agent is
 rewarded for an honest null rather than punished for a gap it couldn't fill — and
 penalised the same as a hallucination if it *invents* one.
 
-The single sub-100% field (UofT tuition amounts) is a real, documented coverage
-gap: UofT serves fee numbers from a JavaScript "Tuition Explorer" widget, so the
-static scrape captures the fee *structure* but not the dollar values. The agent
-reports this honestly. See `eval/REPORT.md` → *Known limitations*.
+See `eval/REPORT.md` for the full per-field breakdown and known limitations.
 
 ## Testing
 
 ```bash
-pip install pytest && pytest -q      # 31 tests, ~0.2s, no network
+python3 -m pytest -q      # 30 tests, ~0.2s, no network
 ```

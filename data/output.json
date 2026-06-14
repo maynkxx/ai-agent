@@ -1,0 +1,1148 @@
+[
+  {
+    "slug": "berkeley",
+    "name": "University of California, Berkeley",
+    "country": "USA",
+    "city": "Berkeley, California",
+    "homepage": "https://www.berkeley.edu/",
+    "scraped_at": "2026-06-14T16:58:31.410534+00:00",
+    "fields": {
+      "about": {
+        "field": "about",
+        "data": {
+          "name": "University of California, Berkeley",
+          "founding_year": 1868,
+          "location": "Berkeley",
+          "country": "null",
+          "type": "public",
+          "ranking": {
+            "null": null
+          },
+          "overview": "The University of California was founded in 1868, born out of a vision in the State Constitution of a university that would “contribute even more than California’s gold to the glory and happiness of advancing generations.”"
+        },
+        "confidence": 0.6,
+        "sources": [
+          "https://www.berkeley.edu/about/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T16:58:36.538553+00:00"
+      },
+      "tuition_fees": {
+        "field": "tuition_fees",
+        "data": [
+          {
+            "program_level": "undergraduate",
+            "program": null,
+            "domestic_annual": 46122,
+            "international_annual": 46122,
+            "currency": "USD",
+            "notes": "Note: Living Expenses and Student Health Insurance Plan are not annual, but rather per year (2026-27)"
+          },
+          {
+            "program_level": "postgraduate",
+            "program": null,
+            "domestic_annual": 18216,
+            "international_annual": 18216,
+            "currency": "USD",
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": null,
+            "domestic_annual": 33,
+            "international_annual": null,
+            "currency": "USD",
+            "notes": "Graduate Assembly Fee"
+          }
+        ],
+        "confidence": 0.45,
+        "sources": [
+          "https://financialaid.berkeley.edu/cost-of-attendance/",
+          "https://registrar.berkeley.edu/tuition-fees-residency/tuition-fees/"
+        ],
+        "flags": [
+          "implausible: domestic_annual=33"
+        ],
+        "needs_review": true,
+        "extracted_at": "2026-06-14T16:59:44.575762+00:00"
+      },
+      "living_costs": {
+        "field": "living_costs",
+        "data": {
+          "city": "Berkeley",
+          "currency": "USD",
+          "period": "monthly",
+          "rent": 1920,
+          "food": 1964,
+          "total": 1964
+        },
+        "confidence": 0.6,
+        "sources": [
+          "https://financialaid.berkeley.edu/cost-of-attendance/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:00:13.385694+00:00"
+      },
+      "scholarships": {
+        "field": "scholarships",
+        "data": [
+          {
+            "name": "Berkeley Undergraduate Scholarship",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": "undergraduate"
+          },
+          {
+            "name": "Fiat Lux Scholarship",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Regents’ and Chancellor’s Scholarship",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Middle Class Scholarship",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Robinson International Scholars Program",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Scholarship Opportunities for International Students",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": "International Students"
+          },
+          {
+            "name": "Blue and Gold: UC Financial Aid",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Native American Opportunity Plan",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Berkeley Undergraduate Dream Act Aid",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": "Undergraduate"
+          },
+          {
+            "name": "Cal Grants",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "California Dream Act Service Incentive Grant Program",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "The Golden State Teacher Grant Program",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Chafee Grant",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Federal Pell Grant",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Federal Supplemental Educational Opportunity Grant (SEOG)",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "The Iraq and Afghanistan Service Grant (IASG) and Children of Fallen Heroes Grant (CFH)",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Parent Grant",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "UC Berkeley Grants",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Department Awards",
+            "value": null,
+            "eligibility": null,
+            "deadline": null,
+            "level": null
+          }
+        ],
+        "confidence": 0.75,
+        "sources": [
+          "https://financialaid.berkeley.edu/types-of-aid/scholarships/",
+          "https://financialaid.berkeley.edu/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:00:45.719511+00:00"
+      },
+      "acceptance_rate": {
+        "field": "acceptance_rate",
+        "data": {
+          "undergraduate_pct": 14.3,
+          "year": 2024
+        },
+        "confidence": 0.6,
+        "sources": [
+          "https://en.wikipedia.org/wiki/University_of_California,_Berkeley"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:01:08.896568+00:00"
+      },
+      "graduate_employment": {
+        "field": "graduate_employment",
+        "data": null,
+        "confidence": 0.0,
+        "sources": [],
+        "flags": [
+          "missing: no value extracted"
+        ],
+        "needs_review": true,
+        "extracted_at": "2026-06-14T17:01:45.730709+00:00"
+      },
+      "average_salaries": {
+        "field": "average_salaries",
+        "data": [
+          {
+            "field_of_study": "Health Professional Schools",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          },
+          {
+            "field_of_study": "Dental",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          },
+          {
+            "field_of_study": "Nursing",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          },
+          {
+            "field_of_study": "Optometry",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          },
+          {
+            "field_of_study": "Pharmacy",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          },
+          {
+            "field_of_study": "Physical Therapy",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          },
+          {
+            "field_of_study": "Physician Assistant",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          },
+          {
+            "field_of_study": "Veterinary Medicine",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          },
+          {
+            "field_of_study": "Law School",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          },
+          {
+            "field_of_study": "Business School",
+            "median_salary": null,
+            "currency": null,
+            "year": null
+          }
+        ],
+        "confidence": 0.6,
+        "sources": [
+          "https://career.berkeley.edu/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:02:40.749898+00:00"
+      },
+      "visa_policies": {
+        "field": "visa_policies",
+        "data": {
+          "visa_type": "F-1 vs. J-1: Which Status is Right For You?",
+          "key_requirements": [
+            "Applying for a Visa",
+            "Entry to the U.S.: Travel and Re-Entry",
+            "Immigration Policy Changes FAQ",
+            "Maintaining Your Status",
+            "Understanding Your I-20",
+            "Understanding the U.S. Entry Visa"
+          ]
+        },
+        "confidence": 0.6,
+        "sources": [
+          "https://internationaloffice.berkeley.edu/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:03:11.927335+00:00"
+      },
+      "intake_deadlines": {
+        "field": "intake_deadlines",
+        "data": [
+          {
+            "intake": "Fall",
+            "program_level": null,
+            "open_date": null,
+            "close_date": null,
+            "notes": "View our annual calendar for deadlines, release dates, and special events."
+          },
+          {
+            "intake": "Spring",
+            "program_level": null,
+            "open_date": null,
+            "close_date": null,
+            "notes": "View our annual calendar for deadlines, release dates, and special events."
+          },
+          {
+            "intake": null,
+            "program_level": null,
+            "open_date": null,
+            "close_date": null,
+            "notes": null
+          }
+        ],
+        "confidence": 0.65,
+        "sources": [
+          "https://admissions.berkeley.edu/",
+          "https://en.wikipedia.org/wiki/University_of_California,_Berkeley"
+        ],
+        "flags": [
+          "partial: no parseable dates in deadlines"
+        ],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:03:29.556506+00:00"
+      },
+      "course_listings": {
+        "field": "course_listings",
+        "data": [
+          {
+            "code": null,
+            "title": null,
+            "credits": null,
+            "description": null,
+            "prerequisites": null,
+            "mode": null
+          }
+        ],
+        "confidence": 0.5,
+        "sources": [
+          "https://guide.berkeley.edu/courses/compsci/"
+        ],
+        "flags": [
+          "partial: courses missing code/title"
+        ],
+        "needs_review": true,
+        "extracted_at": "2026-06-14T17:03:51.675251+00:00"
+      }
+    }
+  },
+  {
+    "slug": "mit",
+    "name": "Massachusetts Institute of Technology",
+    "country": "USA",
+    "city": "Cambridge, Massachusetts",
+    "homepage": "https://web.mit.edu/",
+    "scraped_at": "2026-06-14T17:03:51.684408+00:00",
+    "fields": {
+      "about": {
+        "field": "about",
+        "data": {
+          "name": "Massachusetts Institute of Technology",
+          "founding_year": 1861,
+          "location": "Cambridge, Massachusetts",
+          "country": "United States",
+          "type": "private",
+          "ranking": {
+            "2024": 3
+          },
+          "overview": "MIT Facts provides an annual overview of the breadth of the Institute’s academics, activities, and culture."
+        },
+        "confidence": 0.6,
+        "sources": [
+          "https://web.mit.edu/facts/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:04:52.392092+00:00"
+      },
+      "tuition_fees": {
+        "field": "tuition_fees",
+        "data": [
+          {
+            "program_level": "undergraduate",
+            "program": null,
+            "domestic_annual": 10268,
+            "international_annual": 10268,
+            "currency": "USD",
+            "notes": "Note: This is the median annual price paid by an undergraduate who received an MIT Scholarship."
+          },
+          {
+            "program_level": "postgraduate",
+            "program": null,
+            "domestic_annual": 88775,
+            "international_annual": 88775,
+            "currency": "USD",
+            "notes": "9-month cost column"
+          },
+          {
+            "program_level": "undergraduate",
+            "program": "Architecture (SB, Course 4)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "undergraduate",
+            "program": "Architecture (MArch)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "undergraduate",
+            "program": "Art and Design (SB, Course 4-​B)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "undergraduate",
+            "program": "Art, Culture, and Technology (SM)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "undergraduate",
+            "program": "Architecture Studies (SM)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "undergraduate",
+            "program": "Media Arts and Sciences",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "undergraduate",
+            "program": "Urban Studies and Planning",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "undergraduate",
+            "program": "Planning (SB, Course 11)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "undergraduate",
+            "program": "Urban Science and Planning with Computer Science (SB, Course 11-​6)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Aeronautics and Astronautics Fields (PhD)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Biological Engineering (PhD)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Chemical Engineering (SB, Course 10)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Chemical-​Biological Engineering (SB, Course 10-​B)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Chemical Engineering (SB, Course 10-​C)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Engineering (SB, Course 10-​ENG)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Civil and Environmental Engineering (MEng)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Electrical Engineering and Computer Science (MEng)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Computer Science and Molecular Biology (MEng)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Materials Science and Engineering (SB, Course 3)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          },
+          {
+            "program_level": "graduate",
+            "program": "Materials Science and Engineering (SB, Course 3-​A)",
+            "domestic_annual": null,
+            "international_annual": null,
+            "currency": null,
+            "notes": null
+          }
+        ],
+        "confidence": 0.75,
+        "sources": [
+          "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/",
+          "https://sfs.mit.edu/graduate-students/cost-of-attendance/grad-cost-of-attendance/",
+          "https://catalog.mit.edu/mit/graduate-education/costs/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:06:19.651278+00:00"
+      },
+      "living_costs": {
+        "field": "living_costs",
+        "data": {
+          "city": "Cambridge",
+          "currency": "USD",
+          "period": "annual"
+        },
+        "confidence": 0.6,
+        "sources": [
+          "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:06:45.327868+00:00"
+      },
+      "scholarships": {
+        "field": "scholarships",
+        "data": [
+          {
+            "name": "MIT Scholarship",
+            "value": "100000",
+            "eligibility": "domestic and international undergraduate students with demonstrated financial need",
+            "deadline": null,
+            "level": "undergraduate"
+          },
+          {
+            "name": "Federal Pell Grant",
+            "value": null,
+            "eligibility": "You'll automatically be considered for federal grant programs when you apply for financial aid each year.",
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Federal Supplemental Educational Opportunity Grant",
+            "value": null,
+            "eligibility": "You'll automatically be considered for federal grant programs when you apply for financial aid each year.",
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "State grants",
+            "value": null,
+            "eligibility": "You may qualify for financial aid from your home state if you're a U.S. citizen or permanent resident.",
+            "deadline": null,
+            "level": null
+          },
+          {
+            "name": "Private scholarships",
+            "value": null,
+            "eligibility": "You can apply for private scholarships on your own.",
+            "deadline": null,
+            "level": null
+          }
+        ],
+        "confidence": 0.75,
+        "sources": [
+          "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/making-mit-affordable/",
+          "https://sfs.mit.edu/undergraduate-students/types-of-aid/outside-scholarships-and-financial-aid/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:07:19.278614+00:00"
+      },
+      "acceptance_rate": {
+        "field": "acceptance_rate",
+        "data": null,
+        "confidence": 0.0,
+        "sources": [],
+        "flags": [
+          "missing: no value extracted"
+        ],
+        "needs_review": true,
+        "extracted_at": "2026-06-14T17:07:44.381039+00:00"
+      },
+      "graduate_employment": {
+        "field": "graduate_employment",
+        "data": {
+          "employed_within_6_months_pct": 44,
+          "source": "Graduating Student Survey",
+          "year": 2024,
+          "notes": "Survey administered by Institutional Research (IR), Office of the Provost at MIT, on an ongoing basis to PhD/ScD recipients."
+        },
+        "confidence": 0.75,
+        "sources": [
+          "https://mitadmissions.org/help/faq/career-development/",
+          "https://capd.mit.edu/resources/doctoral-outcomes-and-salaries/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:08:05.108359+00:00"
+      },
+      "average_salaries": {
+        "field": "average_salaries",
+        "data": [
+          {
+            "field_of_study": "Academia & Education",
+            "median_salary": 100000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Architecture, Planning, & Design",
+            "median_salary": 105000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Arts, Communications, & Media",
+            "median_salary": 85000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Business, Finance, & Fintech",
+            "median_salary": 120000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Computing & Computer Technology",
+            "median_salary": 115000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Data Science",
+            "median_salary": 115000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Energy, Environment, & Sustainability",
+            "median_salary": 105000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Health & Medical Professions",
+            "median_salary": 65000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Life Sciences, Biotech, & Pharma",
+            "median_salary": 65000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Manufacturing & Transportation",
+            "median_salary": 85000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Social Impact, Policy, & Law",
+            "median_salary": 85000,
+            "currency": "USD",
+            "year": 2020
+          },
+          {
+            "field_of_study": null,
+            "median_salary": 126438,
+            "currency": "USD",
+            "year": 2024
+          }
+        ],
+        "confidence": 0.75,
+        "sources": [
+          "https://capd.mit.edu/resources/doctoral-outcomes-and-salaries/",
+          "https://mitadmissions.org/help/faq/career-development/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:08:30.136901+00:00"
+      },
+      "visa_policies": {
+        "field": "visa_policies",
+        "data": {
+          "visa_type": "F-1 (Student) Status",
+          "key_requirements": [
+            "valid U.S. immigration status",
+            "Form I-20",
+            "Form DS-2019"
+          ],
+          "country": "United States"
+        },
+        "confidence": 0.75,
+        "sources": [
+          "https://iso.mit.edu/getting-started/requesting-an-i-20-or-ds-2019/",
+          "https://iso.mit.edu/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:09:00.430206+00:00"
+      },
+      "intake_deadlines": {
+        "field": "intake_deadlines",
+        "data": null,
+        "confidence": 0.0,
+        "sources": [],
+        "flags": [
+          "missing: no value extracted"
+        ],
+        "needs_review": true,
+        "extracted_at": "2026-06-14T17:09:14.137801+00:00"
+      },
+      "course_listings": {
+        "field": "course_listings",
+        "data": [
+          {
+            "code": "6-9",
+            "title": "Computation and Cognition",
+            "credits": null,
+            "description": null,
+            "prerequisites": null,
+            "mode": null
+          },
+          {
+            "code": "6-3",
+            "title": "Computer Science and Engineering",
+            "credits": null,
+            "description": null,
+            "prerequisites": null,
+            "mode": null
+          },
+          {
+            "code": "6-7",
+            "title": "Computer Science and Molecular Biology",
+            "credits": null,
+            "description": null,
+            "prerequisites": null,
+            "mode": null
+          },
+          {
+            "code": "6-5",
+            "title": "Electrical Engineering with Computing",
+            "credits": null,
+            "description": null,
+            "prerequisites": null,
+            "mode": null
+          },
+          {
+            "code": "11-6",
+            "title": "Urban Science and Planning with Computer Science",
+            "credits": null,
+            "description": null,
+            "prerequisites": null,
+            "mode": null
+          },
+          {
+            "code": "6",
+            "title": "Electrical Engineering and Computer Science",
+            "credits": null,
+            "description": null,
+            "prerequisites": null,
+            "mode": null
+          },
+          {
+            "code": "6-ENG",
+            "title": "Electrical Engineering and Computer Science",
+            "credits": null,
+            "description": null,
+            "prerequisites": null,
+            "mode": null
+          },
+          {
+            "code": "6-MEng",
+            "title": "Electrical Engineering and Computer Science",
+            "credits": null,
+            "description": null,
+            "prerequisites": null,
+            "mode": null
+          }
+        ],
+        "confidence": 0.6,
+        "sources": [
+          "https://catalog.mit.edu/subjects/6/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:10:08.696390+00:00"
+      }
+    }
+  },
+  {
+    "slug": "uoft",
+    "name": "University of Toronto",
+    "country": "Canada",
+    "city": "Toronto, Ontario",
+    "homepage": "https://www.utoronto.ca/",
+    "scraped_at": "2026-06-14T17:10:08.713026+00:00",
+    "fields": {
+      "about": {
+        "field": "about",
+        "data": {
+          "name": "University of Toronto",
+          "founding_year": 1827,
+          "location": "Greater Toronto Area, Ontario, Canada",
+          "country": "Canada",
+          "type": "public",
+          "ranking": {
+            "2019": 21,
+            "2020": 22
+          },
+          "overview": "The University of Toronto is a public research university with three campuses in the Greater Toronto Area of Ontario, Canada."
+        },
+        "confidence": 0.6,
+        "sources": [
+          "https://en.wikipedia.org/wiki/University_of_Toronto"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:10:43.398049+00:00"
+      },
+      "tuition_fees": {
+        "field": "tuition_fees",
+        "data": [
+          {
+            "program_level": "undergraduate",
+            "program": null,
+            "domestic_annual": 6400.0,
+            "international_annual": 22000.0,
+            "currency": "CAD",
+            "notes": "Fall & winter fees are available for viewing on ACORN, the university's student information service, as early as mid-July."
+          },
+          {
+            "program_level": "postgraduate",
+            "program": null,
+            "domestic_annual": 7300.0,
+            "international_annual": 25000.0,
+            "currency": "CAD",
+            "notes": "Fall & winter fees are available for viewing on ACORN, the university's student information service, as early as mid-July."
+          }
+        ],
+        "confidence": 0.6,
+        "sources": [
+          "https://future.utoronto.ca/finances/fees/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:11:17.521622+00:00"
+      },
+      "living_costs": {
+        "field": "living_costs",
+        "data": {
+          "city": "Toronto",
+          "currency": "CAD",
+          "period": "monthly"
+        },
+        "confidence": 0.6,
+        "sources": [
+          "https://future.utoronto.ca/other-costs-university"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:11:50.389520+00:00"
+      },
+      "scholarships": {
+        "field": "scholarships",
+        "data": [
+          {
+            "name": "The National Scholarship Program",
+            "value": null,
+            "eligibility": "Canadian high school students, original and creative thinkers, community leaders, and high academic achievers",
+            "deadline": null,
+            "level": "Undergraduate"
+          },
+          {
+            "name": "Lester B. Pearson International Scholarship",
+            "value": null,
+            "eligibility": "exceptional academics, creativity, and leadership, highlighting students' impact on their school and community, as well as their global potential",
+            "deadline": null,
+            "level": "Undergraduate"
+          },
+          {
+            "name": "Beland Honderich Awards",
+            "value": "5000",
+            "eligibility": "students in the Pathways to Education Regent Park Program—two entering from Grade 8 and two graduating from Grade 12, academic potential and socioeconomic need",
+            "deadline": null,
+            "level": "Undergraduate"
+          },
+          {
+            "name": "Loran Scholar",
+            "value": null,
+            "eligibility": "leadership-enrichment program, financial support for undergrad, diverse opportunities for experiential learning and a long-term supportive community of peers and mentors",
+            "deadline": null,
+            "level": "Undergraduate"
+          },
+          {
+            "name": "Schulich Leader Scholarships",
+            "value": "120000",
+            "eligibility": "outstanding Canadian high school students who are pursuing studies in STEM fields",
+            "deadline": null,
+            "level": "Undergraduate"
+          }
+        ],
+        "confidence": 0.6,
+        "sources": [
+          "https://future.utoronto.ca/finances/scholarships/"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:12:05.378006+00:00"
+      },
+      "acceptance_rate": {
+        "field": "acceptance_rate",
+        "data": null,
+        "confidence": 0.0,
+        "sources": [],
+        "flags": [
+          "missing: no value extracted"
+        ],
+        "needs_review": true,
+        "extracted_at": "2026-06-14T17:12:30.560083+00:00"
+      },
+      "graduate_employment": {
+        "field": "graduate_employment",
+        "data": null,
+        "confidence": 0.0,
+        "sources": [],
+        "flags": [
+          "missing: no value extracted"
+        ],
+        "needs_review": true,
+        "extracted_at": "2026-06-14T17:12:53.261910+00:00"
+      },
+      "average_salaries": {
+        "field": "average_salaries",
+        "data": [
+          {
+            "field_of_study": "Engineering",
+            "median_salary": 80000,
+            "currency": "CAD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Computer Science",
+            "median_salary": 85000,
+            "currency": "CAD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Business",
+            "median_salary": 70000,
+            "currency": "CAD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Law",
+            "median_salary": 90000,
+            "currency": "CAD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Medicine",
+            "median_salary": 120000,
+            "currency": "CAD",
+            "year": 2020
+          },
+          {
+            "field_of_study": "Other",
+            "median_salary": 60000,
+            "currency": "CAD",
+            "year": 2020
+          }
+        ],
+        "confidence": 0.6,
+        "sources": [
+          "https://en.wikipedia.org/wiki/University_of_Toronto"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:13:14.868946+00:00"
+      },
+      "visa_policies": {
+        "field": "visa_policies",
+        "data": {
+          "visa_type": "study permit",
+          "processing_time": "estimated study permit application processing time for the country where you are submitting your application",
+          "key_requirements": [
+            "valid study permit",
+            "Provincial Attestation Letter (PAL)"
+          ]
+        },
+        "confidence": 0.6,
+        "sources": [
+          "https://future.utoronto.ca/study-permits"
+        ],
+        "flags": [],
+        "needs_review": false,
+        "extracted_at": "2026-06-14T17:13:31.581437+00:00"
+      },
+      "intake_deadlines": {
+        "field": "intake_deadlines",
+        "data": null,
+        "confidence": 0.0,
+        "sources": [],
+        "flags": [
+          "missing: no value extracted"
+        ],
+        "needs_review": true,
+        "extracted_at": "2026-06-14T17:14:22.359889+00:00"
+      },
+      "course_listings": {
+        "field": "course_listings",
+        "data": null,
+        "confidence": 0.0,
+        "sources": [],
+        "flags": [
+          "missing: no value extracted"
+        ],
+        "needs_review": true,
+        "extracted_at": "2026-06-14T17:15:39.356178+00:00"
+      }
+    }
+  }
+]
